@@ -14,14 +14,22 @@ var config = {
     rules: [{
       test: /\.sass$/,
       use: [{
+        loader: "style-loader",
+        loader: "css-loader",
         loader: "sass-loader",
-        options: {}
+        options: {
+          includePaths: [
+            path.join(__dirname, 'node_modules/bootstrap/scss/'),
+          ]
+        }
       }]
     }, {
       test: /\.jsx$/,
       use: [{
         loader: "babel-loader",
-        options: {}
+        query: {
+          presets: ['es2015', 'react']
+        }
       }]
     }]
   },

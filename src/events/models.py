@@ -10,7 +10,7 @@ class Event(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     description = models.TextField(max_length=1000, null=True, blank=True)
     tagline = models.CharField(max_length=200, null=True, blank=True)
-    organization = models.ForiegnKey(Organization, db_index=True)
+    organization = models.ForeignKey(Organization, db_index=True)
 
     class Meta:
         db_table = 'events'

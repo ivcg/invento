@@ -8,7 +8,7 @@ class Organization(models.Model):
     name = models.CharField(max_length=200, db_index=True, unique=True)
     description = models.TextField(max_length=1000)
     website = models.URLField(max_length=200)
-    cover_image = models.FileField(max_length=200, allow_empty_file=True)
+    cover_image = models.FileField(max_length=200)
     address = models.TextField(max_length=1000, blank=True, null=True)
     github_handle = models.CharField(max_length=50, blank=True, null=True,
                                      unique=True)

@@ -1,16 +1,7 @@
-# INVENTO
+## Invento
+Yet Another Event Management Tool
 
-#### Get the UI working
+## Setup Instructions
 
- Install ``Node.js`` and do:
-
- ``npm install``
-
-Once the ``npm install`` finishes, do:
-
-``npm run webpack``
-This does the compiling once this is done.
-
-``npm run webpack-dev-server``
-
-This starts serving the page on ``localhost:8080``
+Right now the project is in the very nascent stage and the README will be
+updated the work on the homepage is completed.

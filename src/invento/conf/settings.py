@@ -15,8 +15,12 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'updatethisisproduction!ok!'
+SECRET_KEY = 'l!1&sp0vm#bk57w0hw)m1edfup9go608i!_bpwn8!8%l)%7h)h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -47,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'invento.urls'
+ROOT_URLCONF = 'invento.conf.urls'
 
 TEMPLATES = [
     {
@@ -65,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'invento.wsgi.application'
+WSGI_APPLICATION = 'invento.conf.wsgi.application'
 
 
 # Database

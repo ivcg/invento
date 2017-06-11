@@ -14,10 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'l!1&sp0vm#bk57w0hw)m1edfup9go608i!_bpwn8!8%l)%7h)h'
@@ -27,9 +24,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -120,3 +115,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, 'static'))
+
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+)

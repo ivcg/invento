@@ -28,3 +28,4 @@ htmlcov/*
 node_modules
 npm-debug*
 __pycache__
+env/
